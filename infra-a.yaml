@@ -1,0 +1,72 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  name: cluster-0edf-7h8bd-infra-us-east-2a
+  namespace: openshift-machine-api
+  resourceVersion: "112177"
+  uid: 954ec93a-5c8d-454d-9fb4-da1c6bc5579e
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: cluster-0edf-7h8bd
+      machine.openshift.io/cluster-api-machineset: cluster-0edf-7h8bd-infra-us-east-2a
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: cluster-0edf-7h8bd
+        machine.openshift.io/cluster-api-machineset: cluster-0edf-7h8bd-infra-us-east-2a
+        machine.openshift.io/cluster-api-machine-role: infra
+        machine.openshift.io/cluster-api-machine-type: infra
+        node-role.kubernetes.io/infra: ""
+    spec:
+      metadata: 
+        labels:
+          node-role.kubernetes.io/infra: ""
+      taints:
+      - effect: NoSchedule
+        key: infra
+        value: reserved
+      - effect: NoExecute
+        key: infra
+        value: reserved
+      providerSpec:
+        value:
+          ami:
+            id: ami-0c17b13bb8b268411
+          apiVersion: awsproviderconfig.openshift.io/v1beta1
+          blockDevices:
+          - ebs:
+              encrypted: true
+              iops: 0
+              kmsKey:
+                arn: ""
+              volumeSize: 120
+              volumeType: gp2
+          credentialsSecret:
+            name: aws-cloud-credentials
+          deviceIndex: 0
+          iamInstanceProfile:
+            id: cluster-0edf-7h8bd-worker-profile
+          instanceType: m5.xlarge
+          kind: AWSMachineProviderConfig
+          metadata:
+            creationTimestamp: null
+          placement:
+            availabilityZone: us-east-2a
+            region: us-east-2
+          securityGroups:
+          - filters:
+            - name: tag:Name
+              values:
+              - cluster-0edf-7h8bd-worker-sg
+          subnet:
+            filters:
+            - name: tag:Name
+              values:
+              - cluster-0edf-7h8bd-private-us-east-2a
+          tags:
+          - name: kubernetes.io/cluster/cluster-0edf-7h8bd
+            value: owned
+          userDataSecret:
+            name: worker-user-data

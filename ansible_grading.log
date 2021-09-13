@@ -1,0 +1,2436 @@
+[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+PLAY [Run FTL Init role - initialize grading report data structures] ***************************************************************************************************************************************
+
+TASK [ftl_run_init : Create grader working directory /tmp/grading_dir] *************************************************************************************************************************************
+Monday 13 September 2021  00:44:22 +0000 (0:00:00.137)       0:00:00.137 ****** 
+ok: [localhost]
+
+TASK [ftl_run_init : Remove any existing grader report: grading_report.txt] ********************************************************************************************************************************
+Monday 13 September 2021  00:44:22 +0000 (0:00:00.571)       0:00:00.708 ****** 
+ok: [localhost]
+
+TASK [ftl_run_init : Generate header for new: grading_report.txt] ******************************************************************************************************************************************
+Monday 13 September 2021  00:44:23 +0000 (0:00:00.355)       0:00:01.063 ****** 
+changed: [localhost]
+
+PLAY [Grade lab Homework of OpenShift Advanced Infrastructure Deployment] **********************************************************************************************************************************
+
+TASK [Set GUID] ********************************************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:24 +0000 (0:00:01.124)       0:00:02.187 ****** 
+ok: [localhost]
+
+TASK [Check if I can login as cluster admin] ***************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:24 +0000 (0:00:00.027)       0:00:02.215 ****** 
+
+TASK [grader_check_oc_command : Set success flag to true] **************************************************************************************************************************************************
+Monday 13 September 2021  00:44:24 +0000 (0:00:00.066)       0:00:02.282 ****** 
+ok: [localhost]
+
+TASK [grader_check_oc_command : Run oc command] ************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:24 +0000 (0:00:00.017)       0:00:02.299 ****** 
+changed: [localhost]
+
+TASK [grader_check_oc_command : Show oc command output] ****************************************************************************************************************************************************
+Monday 13 September 2021  00:44:25 +0000 (0:00:00.749)       0:00:03.049 ****** 
+skipping: [localhost]
+
+TASK [grader_check_oc_command : Fail on command return code] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:25 +0000 (0:00:00.017)       0:00:03.066 ****** 
+skipping: [localhost]
+
+TASK [grader_check_oc_command : Create Pass logging message] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:25 +0000 (0:00:00.030)       0:00:03.097 ****** 
+ok: [localhost]
+
+TASK [grader_check_oc_command : Create Fail logging message] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:25 +0000 (0:00:00.026)       0:00:03.123 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:25 +0000 (0:00:00.022)       0:00:03.146 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:25 +0000 (0:00:00.026)       0:00:03.172 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:25 +0000 (0:00:00.023)       0:00:03.195 ****** 
+changed: [localhost]
+
+TASK [Check if there are 3 masters] ************************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:25 +0000 (0:00:00.581)       0:00:03.777 ****** 
+[DEPRECATION WARNING]: k8s_facts is kept for backwards compatibility but usage is discouraged. The module documentation details page may explain more about this rationale.. This feature will be removed 
+in a future release. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+
+TASK [grader_check_ocp_node_label : Set success flag to false] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:26 +0000 (0:00:00.191)       0:00:03.969 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Print out the node we are checking] ************************************************************************************************************************************
+Monday 13 September 2021  00:44:26 +0000 (0:00:00.017)       0:00:03.986 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_node_label : Lookup nodes] **********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:26 +0000 (0:00:00.020)       0:00:04.006 ****** 
+[DEPRECATION WARNING]: The 'k8s_facts' module has been renamed to 'k8s_info'. This feature will be removed in version 2.13. Deprecation warnings can be disabled by setting deprecation_warnings=False in 
+ansible.cfg.
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Check the node count] **************************************************************************************************************************************************
+Monday 13 September 2021  00:44:27 +0000 (0:00:01.550)       0:00:05.557 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Create Pass logging message] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:27 +0000 (0:00:00.065)       0:00:05.623 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Create Fail logging message] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:27 +0000 (0:00:00.025)       0:00:05.649 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:27 +0000 (0:00:00.022)       0:00:05.672 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:27 +0000 (0:00:00.027)       0:00:05.699 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:27 +0000 (0:00:00.022)       0:00:05.722 ****** 
+changed: [localhost]
+
+TASK [Check if there are 2 infra] **************************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:28 +0000 (0:00:00.347)       0:00:06.070 ****** 
+
+TASK [grader_check_ocp_node_label : Set success flag to false] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:28 +0000 (0:00:00.068)       0:00:06.138 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Print out the node we are checking] ************************************************************************************************************************************
+Monday 13 September 2021  00:44:28 +0000 (0:00:00.016)       0:00:06.155 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_node_label : Lookup nodes] **********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:28 +0000 (0:00:00.020)       0:00:06.176 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Check the node count] **************************************************************************************************************************************************
+Monday 13 September 2021  00:44:29 +0000 (0:00:01.279)       0:00:07.455 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Create Pass logging message] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:29 +0000 (0:00:00.027)       0:00:07.483 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Create Fail logging message] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:29 +0000 (0:00:00.025)       0:00:07.509 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:29 +0000 (0:00:00.022)       0:00:07.531 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:29 +0000 (0:00:00.026)       0:00:07.557 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:29 +0000 (0:00:00.023)       0:00:07.581 ****** 
+changed: [localhost]
+
+TASK [Check if there are 2 workers] ************************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:30 +0000 (0:00:00.348)       0:00:07.930 ****** 
+
+TASK [grader_check_ocp_node_label : Set success flag to false] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:30 +0000 (0:00:00.081)       0:00:08.011 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Print out the node we are checking] ************************************************************************************************************************************
+Monday 13 September 2021  00:44:30 +0000 (0:00:00.017)       0:00:08.029 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_node_label : Lookup nodes] **********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:30 +0000 (0:00:00.020)       0:00:08.049 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Check the node count] **************************************************************************************************************************************************
+Monday 13 September 2021  00:44:31 +0000 (0:00:01.304)       0:00:09.354 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Create Pass logging message] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:31 +0000 (0:00:00.029)       0:00:09.384 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_node_label : Create Fail logging message] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:31 +0000 (0:00:00.025)       0:00:09.409 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:31 +0000 (0:00:00.022)       0:00:09.432 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:31 +0000 (0:00:00.027)       0:00:09.460 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:31 +0000 (0:00:00.023)       0:00:09.483 ****** 
+changed: [localhost]
+
+TASK [Check if the image registry is running on infra nodes] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:31 +0000 (0:00:00.344)       0:00:09.828 ****** 
+
+TASK [grader_check_ocp_pod_node : Set success flag to false] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:32 +0000 (0:00:00.115)       0:00:09.944 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Print out what we are checking] ******************************************************************************************************************************************
+Monday 13 September 2021  00:44:32 +0000 (0:00:00.019)       0:00:09.963 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_pod_node : Set ips to None] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:32 +0000 (0:00:00.020)       0:00:09.984 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Set pod_host_ip to None] *************************************************************************************************************************************************
+Monday 13 September 2021  00:44:32 +0000 (0:00:00.018)       0:00:10.002 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get node count] **********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:32 +0000 (0:00:00.017)       0:00:10.019 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Lookup node IPs] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:32 +0000 (0:00:00.542)       0:00:10.561 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Save IPs to list] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:33 +0000 (0:00:00.546)       0:00:11.108 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get pod count] ***********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:33 +0000 (0:00:00.025)       0:00:11.134 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get pod host IP] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:33 +0000 (0:00:00.579)       0:00:11.713 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Save pod host IP] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:34 +0000 (0:00:00.582)       0:00:12.296 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Check if the pod host IP is in the list] *********************************************************************************************************************************
+Monday 13 September 2021  00:44:34 +0000 (0:00:00.026)       0:00:12.323 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:34 +0000 (0:00:00.035)       0:00:12.358 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:34 +0000 (0:00:00.027)       0:00:12.385 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:34 +0000 (0:00:00.022)       0:00:12.408 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:34 +0000 (0:00:00.028)       0:00:12.436 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:34 +0000 (0:00:00.023)       0:00:12.460 ****** 
+changed: [localhost]
+
+TASK [Check if cluster monitoring is running on infra nodes] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:34 +0000 (0:00:00.350)       0:00:12.810 ****** 
+
+TASK [grader_check_ocp_pod_node : Set success flag to false] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:35 +0000 (0:00:00.119)       0:00:12.929 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Print out what we are checking] ******************************************************************************************************************************************
+Monday 13 September 2021  00:44:35 +0000 (0:00:00.021)       0:00:12.951 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_pod_node : Set ips to None] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:35 +0000 (0:00:00.020)       0:00:12.971 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Set pod_host_ip to None] *************************************************************************************************************************************************
+Monday 13 September 2021  00:44:35 +0000 (0:00:00.049)       0:00:13.021 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get node count] **********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:35 +0000 (0:00:00.018)       0:00:13.039 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Lookup node IPs] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:35 +0000 (0:00:00.557)       0:00:13.597 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Save IPs to list] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:36 +0000 (0:00:00.560)       0:00:14.157 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get pod count] ***********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:36 +0000 (0:00:00.026)       0:00:14.183 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get pod host IP] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:36 +0000 (0:00:00.585)       0:00:14.769 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Save pod host IP] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:37 +0000 (0:00:00.596)       0:00:15.366 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Check if the pod host IP is in the list] *********************************************************************************************************************************
+Monday 13 September 2021  00:44:37 +0000 (0:00:00.026)       0:00:15.392 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:37 +0000 (0:00:00.034)       0:00:15.426 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:37 +0000 (0:00:00.026)       0:00:15.453 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:37 +0000 (0:00:00.024)       0:00:15.477 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:37 +0000 (0:00:00.028)       0:00:15.506 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:37 +0000 (0:00:00.023)       0:00:15.529 ****** 
+changed: [localhost]
+
+TASK [Check if Elasticsearch is running on infra nodes] ****************************************************************************************************************************************************
+Monday 13 September 2021  00:44:38 +0000 (0:00:00.352)       0:00:15.882 ****** 
+
+TASK [grader_check_ocp_pod_node : Set success flag to false] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:38 +0000 (0:00:00.141)       0:00:16.024 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Print out what we are checking] ******************************************************************************************************************************************
+Monday 13 September 2021  00:44:38 +0000 (0:00:00.017)       0:00:16.042 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_pod_node : Set ips to None] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:38 +0000 (0:00:00.021)       0:00:16.063 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Set pod_host_ip to None] *************************************************************************************************************************************************
+Monday 13 September 2021  00:44:38 +0000 (0:00:00.017)       0:00:16.081 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get node count] **********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:38 +0000 (0:00:00.018)       0:00:16.099 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Lookup node IPs] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:38 +0000 (0:00:00.548)       0:00:16.647 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Save IPs to list] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:39 +0000 (0:00:00.607)       0:00:17.254 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get pod count] ***********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:39 +0000 (0:00:00.026)       0:00:17.281 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get pod host IP] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:40 +0000 (0:00:00.571)       0:00:17.853 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Save pod host IP] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:40 +0000 (0:00:00.589)       0:00:18.443 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Check if the pod host IP is in the list] *********************************************************************************************************************************
+Monday 13 September 2021  00:44:40 +0000 (0:00:00.025)       0:00:18.468 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:40 +0000 (0:00:00.034)       0:00:18.503 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:40 +0000 (0:00:00.027)       0:00:18.530 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:40 +0000 (0:00:00.024)       0:00:18.554 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:40 +0000 (0:00:00.027)       0:00:18.582 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:40 +0000 (0:00:00.023)       0:00:18.605 ****** 
+changed: [localhost]
+
+TASK [Check if the CPU request is 500m for Elasticsearch] **************************************************************************************************************************************************
+Monday 13 September 2021  00:44:41 +0000 (0:00:00.343)       0:00:18.949 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:44:41 +0000 (0:00:00.172)       0:00:19.122 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:44:41 +0000 (0:00:00.017)       0:00:19.140 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:41 +0000 (0:00:00.021)       0:00:19.162 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:42 +0000 (0:00:01.533)       0:00:20.695 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: logging.openshift.io/v1
+      kind: ClusterLogging
+      metadata:
+        creationTimestamp: '2021-09-12T22:42:07Z'
+        generation: 1
+        managedFields:
+        - apiVersion: logging.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              .: {}
+              f:collection:
+                .: {}
+                f:logs:
+                  .: {}
+                  f:fluentd:
+                    .: {}
+                    f:tolerations: {}
+                  f:type: {}
+              f:curation:
+                .: {}
+                f:curator:
+                  .: {}
+                  f:schedule: {}
+                  f:tolerations: {}
+                f:type: {}
+              f:logStore:
+                .: {}
+                f:elasticsearch:
+                  .: {}
+                  f:nodeCount: {}
+                  f:proxy:
+                    .: {}
+                    f:resources:
+                      .: {}
+                      f:limits:
+                        .: {}
+                        f:memory: {}
+                      f:requests:
+                        .: {}
+                        f:memory: {}
+                  f:redundancyPolicy: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:storage:
+                    .: {}
+                    f:size: {}
+                    f:storageClassName: {}
+                  f:tolerations: {}
+                f:retentionPolicy:
+                  .: {}
+                  f:application:
+                    .: {}
+                    f:maxAge: {}
+                  f:audit:
+                    .: {}
+                    f:maxAge: {}
+                  f:infra:
+                    .: {}
+                    f:maxAge: {}
+                f:type: {}
+              f:managementState: {}
+              f:visualization:
+                .: {}
+                f:kibana:
+                  .: {}
+                  f:replicas: {}
+                  f:tolerations: {}
+                f:type: {}
+          manager: kubectl-create
+          operation: Update
+          time: '2021-09-12T22:42:07Z'
+        - apiVersion: logging.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              .: {}
+              f:clusterConditions: {}
+              f:collection:
+                .: {}
+                f:logs:
+                  .: {}
+                  f:fluentdStatus:
+                    .: {}
+                    f:daemonSet: {}
+                    f:nodes:
+                      .: {}
+                      f:fluentd-9k2tg: {}
+                      f:fluentd-bnjv8: {}
+                      f:fluentd-jtlms: {}
+                      f:fluentd-q9mq7: {}
+                      f:fluentd-qdvj9: {}
+                      f:fluentd-vv79f: {}
+                      f:fluentd-z8k65: {}
+                    f:pods:
+                      .: {}
+                      f:failed: {}
+                      f:notReady: {}
+                      f:ready: {}
+              f:curation:
+                .: {}
+                f:curatorStatus: {}
+              f:logStore:
+                .: {}
+                f:elasticsearchStatus: {}
+              f:visualization:
+                .: {}
+                f:kibanaStatus: {}
+          manager: cluster-logging-operator
+          operation: Update
+          time: '2021-09-12T22:43:48Z'
+        name: instance
+        namespace: openshift-logging
+        resourceVersion: '261721'
+        uid: 2f5e6aa0-8d20-43e5-897f-0017256d10c7
+      spec:
+        collection:
+          logs:
+            fluentd:
+              tolerations:
+              - effect: NoSchedule
+                key: infra
+                value: reserved
+              - effect: NoExecute
+                key: infra
+                value: reserved
+            type: fluentd
+        curation:
+          curator:
+            schedule: 30 3 * * *
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          type: curator
+        logStore:
+          elasticsearch:
+            nodeCount: 2
+            proxy:
+              resources:
+                limits:
+                  memory: 256Mi
+                requests:
+                  memory: 256Mi
+            redundancyPolicy: SingleRedundancy
+            resources:
+              requests:
+                cpu: 500m
+                memory: 4Gi
+            storage:
+              size: 20G
+              storageClassName: gp2
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          retentionPolicy:
+            application:
+              maxAge: 1d
+            audit:
+              maxAge: 7d
+            infra:
+              maxAge: 7d
+          type: elasticsearch
+        managementState: Managed
+        visualization:
+          kibana:
+            replicas: 1
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          type: kibana
+      status:
+        clusterConditions:
+        - lastTransitionTime: '2021-09-12T22:42:13Z'
+          status: 'False'
+          type: CollectorDeadEnd
+        collection:
+          logs:
+            fluentdStatus:
+              daemonSet: fluentd
+              nodes:
+                fluentd-9k2tg: ip-10-0-144-129.us-east-2.compute.internal
+                fluentd-bnjv8: ip-10-0-181-129.us-east-2.compute.internal
+                fluentd-jtlms: ip-10-0-163-195.us-east-2.compute.internal
+                fluentd-q9mq7: ip-10-0-135-51.us-east-2.compute.internal
+                fluentd-qdvj9: ip-10-0-158-108.us-east-2.compute.internal
+                fluentd-vv79f: ip-10-0-189-82.us-east-2.compute.internal
+                fluentd-z8k65: ip-10-0-197-113.us-east-2.compute.internal
+              pods:
+                failed: []
+                notReady: []
+                ready:
+                - fluentd-9k2tg
+                - fluentd-bnjv8
+                - fluentd-jtlms
+                - fluentd-q9mq7
+                - fluentd-qdvj9
+                - fluentd-vv79f
+                - fluentd-z8k65
+        curation:
+          curatorStatus:
+          - cronJobs: curator
+            schedules: 30 3 * * *
+            suspended: false
+        logStore:
+          elasticsearchStatus:
+          - cluster:
+              activePrimaryShards: 12
+              activeShards: 24
+              initializingShards: 0
+              numDataNodes: 2
+              numNodes: 2
+              pendingTasks: 0
+              relocatingShards: 0
+              status: green
+              unassignedShards: 0
+            clusterName: elasticsearch
+            nodeConditions:
+              elasticsearch-cdm-knvoz12q-1: []
+              elasticsearch-cdm-knvoz12q-2: []
+            nodeCount: 2
+            pods:
+              client:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+              data:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+              master:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+            shardAllocationEnabled: all
+        visualization:
+          kibanaStatus:
+          - deployment: kibana
+            pods:
+              failed: []
+              notReady: []
+              ready:
+              - kibana-5f4c58cd7d-6qqqv
+            replicaSets:
+            - kibana-5f4c58cd7d
+            replicas: 1
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:44:42 +0000 (0:00:00.071)       0:00:20.766 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:42 +0000 (0:00:00.027)       0:00:20.793 ****** 
+[DEPRECATION WARNING]: evaluating 'resource' as a bare variable, this behaviour will go away and you might need to add |bool to the expression in the future. Also see CONDITIONAL_BARE_VARS configuration 
+toggle. This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+skipping: [localhost] => (item=CPU request is not 500m for Elasticsearch) 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.059)       0:00:20.853 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.029)       0:00:20.882 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.024)       0:00:20.907 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.030)       0:00:20.937 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.024)       0:00:20.962 ****** 
+changed: [localhost]
+
+TASK [Check if the memory request is 4Gi for Elasticsearch] ************************************************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.356)       0:00:21.318 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.205)       0:00:21.523 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.017)       0:00:21.541 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:43 +0000 (0:00:00.022)       0:00:21.563 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:44 +0000 (0:00:01.258)       0:00:22.821 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: logging.openshift.io/v1
+      kind: ClusterLogging
+      metadata:
+        creationTimestamp: '2021-09-12T22:42:07Z'
+        generation: 1
+        managedFields:
+        - apiVersion: logging.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              .: {}
+              f:collection:
+                .: {}
+                f:logs:
+                  .: {}
+                  f:fluentd:
+                    .: {}
+                    f:tolerations: {}
+                  f:type: {}
+              f:curation:
+                .: {}
+                f:curator:
+                  .: {}
+                  f:schedule: {}
+                  f:tolerations: {}
+                f:type: {}
+              f:logStore:
+                .: {}
+                f:elasticsearch:
+                  .: {}
+                  f:nodeCount: {}
+                  f:proxy:
+                    .: {}
+                    f:resources:
+                      .: {}
+                      f:limits:
+                        .: {}
+                        f:memory: {}
+                      f:requests:
+                        .: {}
+                        f:memory: {}
+                  f:redundancyPolicy: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:storage:
+                    .: {}
+                    f:size: {}
+                    f:storageClassName: {}
+                  f:tolerations: {}
+                f:retentionPolicy:
+                  .: {}
+                  f:application:
+                    .: {}
+                    f:maxAge: {}
+                  f:audit:
+                    .: {}
+                    f:maxAge: {}
+                  f:infra:
+                    .: {}
+                    f:maxAge: {}
+                f:type: {}
+              f:managementState: {}
+              f:visualization:
+                .: {}
+                f:kibana:
+                  .: {}
+                  f:replicas: {}
+                  f:tolerations: {}
+                f:type: {}
+          manager: kubectl-create
+          operation: Update
+          time: '2021-09-12T22:42:07Z'
+        - apiVersion: logging.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              .: {}
+              f:clusterConditions: {}
+              f:collection:
+                .: {}
+                f:logs:
+                  .: {}
+                  f:fluentdStatus:
+                    .: {}
+                    f:daemonSet: {}
+                    f:nodes:
+                      .: {}
+                      f:fluentd-9k2tg: {}
+                      f:fluentd-bnjv8: {}
+                      f:fluentd-jtlms: {}
+                      f:fluentd-q9mq7: {}
+                      f:fluentd-qdvj9: {}
+                      f:fluentd-vv79f: {}
+                      f:fluentd-z8k65: {}
+                    f:pods:
+                      .: {}
+                      f:failed: {}
+                      f:notReady: {}
+                      f:ready: {}
+              f:curation:
+                .: {}
+                f:curatorStatus: {}
+              f:logStore:
+                .: {}
+                f:elasticsearchStatus: {}
+              f:visualization:
+                .: {}
+                f:kibanaStatus: {}
+          manager: cluster-logging-operator
+          operation: Update
+          time: '2021-09-12T22:43:48Z'
+        name: instance
+        namespace: openshift-logging
+        resourceVersion: '261721'
+        uid: 2f5e6aa0-8d20-43e5-897f-0017256d10c7
+      spec:
+        collection:
+          logs:
+            fluentd:
+              tolerations:
+              - effect: NoSchedule
+                key: infra
+                value: reserved
+              - effect: NoExecute
+                key: infra
+                value: reserved
+            type: fluentd
+        curation:
+          curator:
+            schedule: 30 3 * * *
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          type: curator
+        logStore:
+          elasticsearch:
+            nodeCount: 2
+            proxy:
+              resources:
+                limits:
+                  memory: 256Mi
+                requests:
+                  memory: 256Mi
+            redundancyPolicy: SingleRedundancy
+            resources:
+              requests:
+                cpu: 500m
+                memory: 4Gi
+            storage:
+              size: 20G
+              storageClassName: gp2
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          retentionPolicy:
+            application:
+              maxAge: 1d
+            audit:
+              maxAge: 7d
+            infra:
+              maxAge: 7d
+          type: elasticsearch
+        managementState: Managed
+        visualization:
+          kibana:
+            replicas: 1
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          type: kibana
+      status:
+        clusterConditions:
+        - lastTransitionTime: '2021-09-12T22:42:13Z'
+          status: 'False'
+          type: CollectorDeadEnd
+        collection:
+          logs:
+            fluentdStatus:
+              daemonSet: fluentd
+              nodes:
+                fluentd-9k2tg: ip-10-0-144-129.us-east-2.compute.internal
+                fluentd-bnjv8: ip-10-0-181-129.us-east-2.compute.internal
+                fluentd-jtlms: ip-10-0-163-195.us-east-2.compute.internal
+                fluentd-q9mq7: ip-10-0-135-51.us-east-2.compute.internal
+                fluentd-qdvj9: ip-10-0-158-108.us-east-2.compute.internal
+                fluentd-vv79f: ip-10-0-189-82.us-east-2.compute.internal
+                fluentd-z8k65: ip-10-0-197-113.us-east-2.compute.internal
+              pods:
+                failed: []
+                notReady: []
+                ready:
+                - fluentd-9k2tg
+                - fluentd-bnjv8
+                - fluentd-jtlms
+                - fluentd-q9mq7
+                - fluentd-qdvj9
+                - fluentd-vv79f
+                - fluentd-z8k65
+        curation:
+          curatorStatus:
+          - cronJobs: curator
+            schedules: 30 3 * * *
+            suspended: false
+        logStore:
+          elasticsearchStatus:
+          - cluster:
+              activePrimaryShards: 12
+              activeShards: 24
+              initializingShards: 0
+              numDataNodes: 2
+              numNodes: 2
+              pendingTasks: 0
+              relocatingShards: 0
+              status: green
+              unassignedShards: 0
+            clusterName: elasticsearch
+            nodeConditions:
+              elasticsearch-cdm-knvoz12q-1: []
+              elasticsearch-cdm-knvoz12q-2: []
+            nodeCount: 2
+            pods:
+              client:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+              data:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+              master:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+            shardAllocationEnabled: all
+        visualization:
+          kibanaStatus:
+          - deployment: kibana
+            pods:
+              failed: []
+              notReady: []
+              ready:
+              - kibana-5f4c58cd7d-6qqqv
+            replicaSets:
+            - kibana-5f4c58cd7d
+            replicas: 1
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.069)       0:00:22.891 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.025)       0:00:22.916 ****** 
+[DEPRECATION WARNING]: evaluating 'resource' as a bare variable, this behaviour will go away and you might need to add |bool to the expression in the future. Also see CONDITIONAL_BARE_VARS configuration 
+toggle. This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+skipping: [localhost] => (item=Memory request is not 4Gi for Elasticsearch) 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.057)       0:00:22.974 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.027)       0:00:23.002 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.023)       0:00:23.025 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.028)       0:00:23.054 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.026)       0:00:23.080 ****** 
+changed: [localhost]
+
+TASK [Check if the storage size is 20G for Elasticsearch] **************************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.358)       0:00:23.438 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.186)       0:00:23.625 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.018)       0:00:23.644 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:45 +0000 (0:00:00.022)       0:00:23.666 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:01.324)       0:00:24.991 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: logging.openshift.io/v1
+      kind: ClusterLogging
+      metadata:
+        creationTimestamp: '2021-09-12T22:42:07Z'
+        generation: 1
+        managedFields:
+        - apiVersion: logging.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              .: {}
+              f:collection:
+                .: {}
+                f:logs:
+                  .: {}
+                  f:fluentd:
+                    .: {}
+                    f:tolerations: {}
+                  f:type: {}
+              f:curation:
+                .: {}
+                f:curator:
+                  .: {}
+                  f:schedule: {}
+                  f:tolerations: {}
+                f:type: {}
+              f:logStore:
+                .: {}
+                f:elasticsearch:
+                  .: {}
+                  f:nodeCount: {}
+                  f:proxy:
+                    .: {}
+                    f:resources:
+                      .: {}
+                      f:limits:
+                        .: {}
+                        f:memory: {}
+                      f:requests:
+                        .: {}
+                        f:memory: {}
+                  f:redundancyPolicy: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:storage:
+                    .: {}
+                    f:size: {}
+                    f:storageClassName: {}
+                  f:tolerations: {}
+                f:retentionPolicy:
+                  .: {}
+                  f:application:
+                    .: {}
+                    f:maxAge: {}
+                  f:audit:
+                    .: {}
+                    f:maxAge: {}
+                  f:infra:
+                    .: {}
+                    f:maxAge: {}
+                f:type: {}
+              f:managementState: {}
+              f:visualization:
+                .: {}
+                f:kibana:
+                  .: {}
+                  f:replicas: {}
+                  f:tolerations: {}
+                f:type: {}
+          manager: kubectl-create
+          operation: Update
+          time: '2021-09-12T22:42:07Z'
+        - apiVersion: logging.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              .: {}
+              f:clusterConditions: {}
+              f:collection:
+                .: {}
+                f:logs:
+                  .: {}
+                  f:fluentdStatus:
+                    .: {}
+                    f:daemonSet: {}
+                    f:nodes:
+                      .: {}
+                      f:fluentd-9k2tg: {}
+                      f:fluentd-bnjv8: {}
+                      f:fluentd-jtlms: {}
+                      f:fluentd-q9mq7: {}
+                      f:fluentd-qdvj9: {}
+                      f:fluentd-vv79f: {}
+                      f:fluentd-z8k65: {}
+                    f:pods:
+                      .: {}
+                      f:failed: {}
+                      f:notReady: {}
+                      f:ready: {}
+              f:curation:
+                .: {}
+                f:curatorStatus: {}
+              f:logStore:
+                .: {}
+                f:elasticsearchStatus: {}
+              f:visualization:
+                .: {}
+                f:kibanaStatus: {}
+          manager: cluster-logging-operator
+          operation: Update
+          time: '2021-09-12T22:43:48Z'
+        name: instance
+        namespace: openshift-logging
+        resourceVersion: '261721'
+        uid: 2f5e6aa0-8d20-43e5-897f-0017256d10c7
+      spec:
+        collection:
+          logs:
+            fluentd:
+              tolerations:
+              - effect: NoSchedule
+                key: infra
+                value: reserved
+              - effect: NoExecute
+                key: infra
+                value: reserved
+            type: fluentd
+        curation:
+          curator:
+            schedule: 30 3 * * *
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          type: curator
+        logStore:
+          elasticsearch:
+            nodeCount: 2
+            proxy:
+              resources:
+                limits:
+                  memory: 256Mi
+                requests:
+                  memory: 256Mi
+            redundancyPolicy: SingleRedundancy
+            resources:
+              requests:
+                cpu: 500m
+                memory: 4Gi
+            storage:
+              size: 20G
+              storageClassName: gp2
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          retentionPolicy:
+            application:
+              maxAge: 1d
+            audit:
+              maxAge: 7d
+            infra:
+              maxAge: 7d
+          type: elasticsearch
+        managementState: Managed
+        visualization:
+          kibana:
+            replicas: 1
+            tolerations:
+            - effect: NoSchedule
+              key: infra
+              value: reserved
+            - effect: NoExecute
+              key: infra
+              value: reserved
+          type: kibana
+      status:
+        clusterConditions:
+        - lastTransitionTime: '2021-09-12T22:42:13Z'
+          status: 'False'
+          type: CollectorDeadEnd
+        collection:
+          logs:
+            fluentdStatus:
+              daemonSet: fluentd
+              nodes:
+                fluentd-9k2tg: ip-10-0-144-129.us-east-2.compute.internal
+                fluentd-bnjv8: ip-10-0-181-129.us-east-2.compute.internal
+                fluentd-jtlms: ip-10-0-163-195.us-east-2.compute.internal
+                fluentd-q9mq7: ip-10-0-135-51.us-east-2.compute.internal
+                fluentd-qdvj9: ip-10-0-158-108.us-east-2.compute.internal
+                fluentd-vv79f: ip-10-0-189-82.us-east-2.compute.internal
+                fluentd-z8k65: ip-10-0-197-113.us-east-2.compute.internal
+              pods:
+                failed: []
+                notReady: []
+                ready:
+                - fluentd-9k2tg
+                - fluentd-bnjv8
+                - fluentd-jtlms
+                - fluentd-q9mq7
+                - fluentd-qdvj9
+                - fluentd-vv79f
+                - fluentd-z8k65
+        curation:
+          curatorStatus:
+          - cronJobs: curator
+            schedules: 30 3 * * *
+            suspended: false
+        logStore:
+          elasticsearchStatus:
+          - cluster:
+              activePrimaryShards: 12
+              activeShards: 24
+              initializingShards: 0
+              numDataNodes: 2
+              numNodes: 2
+              pendingTasks: 0
+              relocatingShards: 0
+              status: green
+              unassignedShards: 0
+            clusterName: elasticsearch
+            nodeConditions:
+              elasticsearch-cdm-knvoz12q-1: []
+              elasticsearch-cdm-knvoz12q-2: []
+            nodeCount: 2
+            pods:
+              client:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+              data:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+              master:
+                failed: []
+                notReady: []
+                ready:
+                - elasticsearch-cdm-knvoz12q-1-75b7bc5648-qgdkw
+                - elasticsearch-cdm-knvoz12q-2-54cf754c79-gjp52
+            shardAllocationEnabled: all
+        visualization:
+          kibanaStatus:
+          - deployment: kibana
+            pods:
+              failed: []
+              notReady: []
+              ready:
+              - kibana-5f4c58cd7d-6qqqv
+            replicaSets:
+            - kibana-5f4c58cd7d
+            replicas: 1
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.069)       0:00:25.060 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.026)       0:00:25.087 ****** 
+[DEPRECATION WARNING]: evaluating 'resource' as a bare variable, this behaviour will go away and you might need to add |bool to the expression in the future. Also see CONDITIONAL_BARE_VARS configuration 
+toggle. This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+skipping: [localhost] => (item=Storage size is not 20G for Elasticsearch) 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.057)       0:00:25.144 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.028)       0:00:25.172 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.023)       0:00:25.196 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.029)       0:00:25.225 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.025)       0:00:25.251 ****** 
+changed: [localhost]
+
+TASK [Check if there are 2 routers] ************************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.354)       0:00:25.606 ****** 
+
+TASK [grader_check_ocp_pod_label : Set success flag to false] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.209)       0:00:25.815 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_label : Print out the pod we are checking] **************************************************************************************************************************************
+Monday 13 September 2021  00:44:47 +0000 (0:00:00.017)       0:00:25.832 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_pod_label : Lookup pods] ************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:48 +0000 (0:00:00.020)       0:00:25.853 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_label : Check the pod count] ****************************************************************************************************************************************************
+Monday 13 September 2021  00:44:49 +0000 (0:00:01.304)       0:00:27.157 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_label : Create Pass logging message] ********************************************************************************************************************************************
+Monday 13 September 2021  00:44:49 +0000 (0:00:00.031)       0:00:27.189 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_label : Create Fail logging message] ********************************************************************************************************************************************
+Monday 13 September 2021  00:44:49 +0000 (0:00:00.027)       0:00:27.217 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:49 +0000 (0:00:00.024)       0:00:27.242 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:49 +0000 (0:00:00.029)       0:00:27.271 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:49 +0000 (0:00:00.025)       0:00:27.297 ****** 
+changed: [localhost]
+
+TASK [Check if the routers are running on infra nodes] *****************************************************************************************************************************************************
+Monday 13 September 2021  00:44:49 +0000 (0:00:00.358)       0:00:27.655 ****** 
+
+TASK [grader_check_ocp_pod_node : Set success flag to false] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:50 +0000 (0:00:00.259)       0:00:27.915 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Print out what we are checking] ******************************************************************************************************************************************
+Monday 13 September 2021  00:44:50 +0000 (0:00:00.017)       0:00:27.933 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_pod_node : Set ips to None] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:50 +0000 (0:00:00.020)       0:00:27.953 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Set pod_host_ip to None] *************************************************************************************************************************************************
+Monday 13 September 2021  00:44:50 +0000 (0:00:00.017)       0:00:27.971 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get node count] **********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:50 +0000 (0:00:00.017)       0:00:27.989 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Lookup node IPs] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:50 +0000 (0:00:00.549)       0:00:28.538 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Save IPs to list] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:51 +0000 (0:00:00.562)       0:00:29.101 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get pod count] ***********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:51 +0000 (0:00:00.027)       0:00:29.128 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Get pod host IP] *********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:51 +0000 (0:00:00.587)       0:00:29.716 ****** 
+changed: [localhost]
+
+TASK [grader_check_ocp_pod_node : Save pod host IP] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:52 +0000 (0:00:00.583)       0:00:30.299 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Check if the pod host IP is in the list] *********************************************************************************************************************************
+Monday 13 September 2021  00:44:52 +0000 (0:00:00.025)       0:00:30.324 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:52 +0000 (0:00:00.033)       0:00:30.358 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_pod_node : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:52 +0000 (0:00:00.029)       0:00:30.388 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:52 +0000 (0:00:00.023)       0:00:30.411 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:52 +0000 (0:00:00.029)       0:00:30.440 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:52 +0000 (0:00:00.023)       0:00:30.464 ****** 
+changed: [localhost]
+
+TASK [Check if 5 user identities exist] ********************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:52 +0000 (0:00:00.346)       0:00:30.811 ****** 
+
+TASK [grader_check_ocp_identity : Set success flag to false] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:53 +0000 (0:00:00.240)       0:00:31.052 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_identity : Print out the identity] **************************************************************************************************************************************************
+Monday 13 September 2021  00:44:53 +0000 (0:00:00.017)       0:00:31.070 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_identity : Lookup identities] *******************************************************************************************************************************************************
+Monday 13 September 2021  00:44:53 +0000 (0:00:00.021)       0:00:31.091 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_identity : Check the identities count] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:54 +0000 (0:00:01.311)       0:00:32.403 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_identity : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:54 +0000 (0:00:00.029)       0:00:32.432 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_identity : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:54 +0000 (0:00:00.028)       0:00:32.460 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:54 +0000 (0:00:00.023)       0:00:32.484 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:54 +0000 (0:00:00.028)       0:00:32.513 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:54 +0000 (0:00:00.024)       0:00:32.537 ****** 
+changed: [localhost]
+
+TASK [Check if john is a member of lab-cluster-admins with cluster-admin authorization] ********************************************************************************************************************
+Monday 13 September 2021  00:44:55 +0000 (0:00:00.345)       0:00:32.882 ****** 
+
+TASK [grader_check_oc_command : Set success flag to true] **************************************************************************************************************************************************
+Monday 13 September 2021  00:44:55 +0000 (0:00:00.245)       0:00:33.128 ****** 
+ok: [localhost]
+
+TASK [grader_check_oc_command : Run oc command] ************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:55 +0000 (0:00:00.019)       0:00:33.147 ****** 
+changed: [localhost]
+
+TASK [grader_check_oc_command : Show oc command output] ****************************************************************************************************************************************************
+Monday 13 September 2021  00:44:55 +0000 (0:00:00.576)       0:00:33.724 ****** 
+skipping: [localhost]
+
+TASK [grader_check_oc_command : Fail on command return code] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:55 +0000 (0:00:00.018)       0:00:33.743 ****** 
+skipping: [localhost]
+
+TASK [grader_check_oc_command : Create Pass logging message] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:55 +0000 (0:00:00.032)       0:00:33.776 ****** 
+ok: [localhost]
+
+TASK [grader_check_oc_command : Create Fail logging message] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:44:55 +0000 (0:00:00.028)       0:00:33.804 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:55 +0000 (0:00:00.025)       0:00:33.830 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:56 +0000 (0:00:00.029)       0:00:33.859 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:56 +0000 (0:00:00.024)       0:00:33.884 ****** 
+changed: [localhost]
+
+TASK [Create a project george-test] ************************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:56 +0000 (0:00:00.363)       0:00:34.247 ****** 
+changed: [localhost]
+
+TASK [Check LimitRange in project george-test] *************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:57 +0000 (0:00:00.754)       0:00:35.001 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:44:57 +0000 (0:00:00.259)       0:00:35.261 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:44:57 +0000 (0:00:00.018)       0:00:35.279 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:57 +0000 (0:00:00.022)       0:00:35.302 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:44:58 +0000 (0:00:01.237)       0:00:36.540 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: v1
+      kind: LimitRange
+      metadata:
+        creationTimestamp: '2021-09-13T00:44:57Z'
+        managedFields:
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              f:limits: {}
+          manager: openshift-apiserver
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        name: project-limits
+        namespace: george-test
+        resourceVersion: '286665'
+        uid: 28442c84-1eb1-434f-a6bb-1c051df74f31
+      spec:
+        limits:
+        - default:
+            cpu: '1'
+            memory: 1Gi
+          defaultRequest:
+            cpu: 500m
+            memory: 500Mi
+          type: Container
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:44:58 +0000 (0:00:00.027)       0:00:36.568 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:44:58 +0000 (0:00:00.026)       0:00:36.594 ****** 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:58 +0000 (0:00:00.020)       0:00:36.615 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:44:58 +0000 (0:00:00.027)       0:00:36.642 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:58 +0000 (0:00:00.024)       0:00:36.667 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:44:58 +0000 (0:00:00.028)       0:00:36.696 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:44:58 +0000 (0:00:00.024)       0:00:36.720 ****** 
+changed: [localhost]
+
+TASK [Check if the default CPU request is 500m in the LimitRange] ******************************************************************************************************************************************
+Monday 13 September 2021  00:44:59 +0000 (0:00:00.354)       0:00:37.075 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:44:59 +0000 (0:00:00.277)       0:00:37.352 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:44:59 +0000 (0:00:00.018)       0:00:37.371 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:44:59 +0000 (0:00:00.023)       0:00:37.394 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:00 +0000 (0:00:01.222)       0:00:38.617 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: v1
+      kind: LimitRange
+      metadata:
+        creationTimestamp: '2021-09-13T00:44:57Z'
+        managedFields:
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              f:limits: {}
+          manager: openshift-apiserver
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        name: project-limits
+        namespace: george-test
+        resourceVersion: '286665'
+        uid: 28442c84-1eb1-434f-a6bb-1c051df74f31
+      spec:
+        limits:
+        - default:
+            cpu: '1'
+            memory: 1Gi
+          defaultRequest:
+            cpu: 500m
+            memory: 500Mi
+          type: Container
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:45:00 +0000 (0:00:00.031)       0:00:38.649 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:45:00 +0000 (0:00:00.028)       0:00:38.678 ****** 
+[DEPRECATION WARNING]: evaluating 'resource' as a bare variable, this behaviour will go away and you might need to add |bool to the expression in the future. Also see CONDITIONAL_BARE_VARS configuration 
+toggle. This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+skipping: [localhost] => (item=Default CPU request is not 500m in the LimitRange project-limits) 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:00 +0000 (0:00:00.047)       0:00:38.725 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:00 +0000 (0:00:00.030)       0:00:38.756 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:00 +0000 (0:00:00.027)       0:00:38.784 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:00 +0000 (0:00:00.030)       0:00:38.815 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:45:00 +0000 (0:00:00.027)       0:00:38.842 ****** 
+changed: [localhost]
+
+TASK [Check if the default memory request is 500Mi in the LimitRange] **************************************************************************************************************************************
+Monday 13 September 2021  00:45:01 +0000 (0:00:00.364)       0:00:39.207 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:45:01 +0000 (0:00:00.348)       0:00:39.555 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:45:01 +0000 (0:00:00.019)       0:00:39.574 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:45:01 +0000 (0:00:00.022)       0:00:39.596 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:01.291)       0:00:40.888 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: v1
+      kind: LimitRange
+      metadata:
+        creationTimestamp: '2021-09-13T00:44:57Z'
+        managedFields:
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              f:limits: {}
+          manager: openshift-apiserver
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        name: project-limits
+        namespace: george-test
+        resourceVersion: '286665'
+        uid: 28442c84-1eb1-434f-a6bb-1c051df74f31
+      spec:
+        limits:
+        - default:
+            cpu: '1'
+            memory: 1Gi
+          defaultRequest:
+            cpu: 500m
+            memory: 500Mi
+          type: Container
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.030)       0:00:40.918 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.027)       0:00:40.946 ****** 
+[DEPRECATION WARNING]: evaluating 'resource' as a bare variable, this behaviour will go away and you might need to add |bool to the expression in the future. Also see CONDITIONAL_BARE_VARS configuration 
+toggle. This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+skipping: [localhost] => (item=Default memory request is not 500Mi in the LimitRange project-limits) 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.043)       0:00:40.989 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.029)       0:00:41.019 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.026)       0:00:41.045 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.031)       0:00:41.076 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.026)       0:00:41.103 ****** 
+changed: [localhost]
+
+TASK [Check ResourceQuota in project george-test] **********************************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.361)       0:00:41.464 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.305)       0:00:41.769 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.018)       0:00:41.788 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:45:03 +0000 (0:00:00.023)       0:00:41.812 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:01.253)       0:00:43.065 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: v1
+      kind: ResourceQuota
+      metadata:
+        creationTimestamp: '2021-09-13T00:44:57Z'
+        managedFields:
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              f:hard:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: cluster-policy-controller
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              f:used:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: kube-controller-manager
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              f:hard:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: openshift-apiserver
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        name: project-quota
+        namespace: george-test
+        resourceVersion: '286681'
+        uid: 6df85636-521e-4d31-b30e-e18f03962732
+      spec:
+        hard:
+          limits.cpu: '6'
+          limits.ephemeral-storage: 20G
+          limits.memory: 16Gi
+          pods: '10'
+          requests.cpu: '4'
+          requests.ephemeral-storage: 20G
+          requests.memory: 8Gi
+          requests.storage: 20G
+      status:
+        hard:
+          limits.cpu: '6'
+          limits.ephemeral-storage: 20G
+          limits.memory: 16Gi
+          pods: '10'
+          requests.cpu: '4'
+          requests.ephemeral-storage: 20G
+          requests.memory: 8Gi
+          requests.storage: 20G
+        used:
+          limits.cpu: '0'
+          limits.ephemeral-storage: '0'
+          limits.memory: '0'
+          pods: '0'
+          requests.cpu: '0'
+          requests.ephemeral-storage: '0'
+          requests.memory: '0'
+          requests.storage: '0'
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:00.041)       0:00:43.107 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:00.026)       0:00:43.133 ****** 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:00.021)       0:00:43.155 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:00.028)       0:00:43.184 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:00.025)       0:00:43.209 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:00.029)       0:00:43.239 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:00.025)       0:00:43.265 ****** 
+changed: [localhost]
+
+TASK [Check if the CPU quota is 4 in the project george-test] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:05 +0000 (0:00:00.354)       0:00:43.620 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:45:06 +0000 (0:00:00.321)       0:00:43.941 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:45:06 +0000 (0:00:00.020)       0:00:43.961 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:45:06 +0000 (0:00:00.024)       0:00:43.985 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:01.211)       0:00:45.197 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: v1
+      kind: ResourceQuota
+      metadata:
+        creationTimestamp: '2021-09-13T00:44:57Z'
+        managedFields:
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              f:hard:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: cluster-policy-controller
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              f:used:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: kube-controller-manager
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              f:hard:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: openshift-apiserver
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        name: project-quota
+        namespace: george-test
+        resourceVersion: '286681'
+        uid: 6df85636-521e-4d31-b30e-e18f03962732
+      spec:
+        hard:
+          limits.cpu: '6'
+          limits.ephemeral-storage: 20G
+          limits.memory: 16Gi
+          pods: '10'
+          requests.cpu: '4'
+          requests.ephemeral-storage: 20G
+          requests.memory: 8Gi
+          requests.storage: 20G
+      status:
+        hard:
+          limits.cpu: '6'
+          limits.ephemeral-storage: 20G
+          limits.memory: 16Gi
+          pods: '10'
+          requests.cpu: '4'
+          requests.ephemeral-storage: 20G
+          requests.memory: 8Gi
+          requests.storage: 20G
+        used:
+          limits.cpu: '0'
+          limits.ephemeral-storage: '0'
+          limits.memory: '0'
+          pods: '0'
+          requests.cpu: '0'
+          requests.ephemeral-storage: '0'
+          requests.memory: '0'
+          requests.storage: '0'
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:00.041)       0:00:45.239 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:00.026)       0:00:45.265 ****** 
+[DEPRECATION WARNING]: evaluating 'resource' as a bare variable, this behaviour will go away and you might need to add |bool to the expression in the future. Also see CONDITIONAL_BARE_VARS configuration 
+toggle. This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+skipping: [localhost] => (item=Check if the CPU quota is 4 in the project george-test) 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:00.045)       0:00:45.311 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:00.029)       0:00:45.340 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:00.025)       0:00:45.366 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:00.030)       0:00:45.396 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:00.026)       0:00:45.423 ****** 
+changed: [localhost]
+
+TASK [Check if the storage request quota is 20G in the project george-test] ********************************************************************************************************************************
+Monday 13 September 2021  00:45:07 +0000 (0:00:00.353)       0:00:45.777 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:45:08 +0000 (0:00:00.410)       0:00:46.188 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:45:08 +0000 (0:00:00.019)       0:00:46.207 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:45:08 +0000 (0:00:00.026)       0:00:46.234 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:09 +0000 (0:00:01.241)       0:00:47.475 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: v1
+      kind: ResourceQuota
+      metadata:
+        creationTimestamp: '2021-09-13T00:44:57Z'
+        managedFields:
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              f:hard:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: cluster-policy-controller
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:status:
+              f:used:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: kube-controller-manager
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        - apiVersion: v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              f:hard:
+                .: {}
+                f:limits.cpu: {}
+                f:limits.ephemeral-storage: {}
+                f:limits.memory: {}
+                f:pods: {}
+                f:requests.cpu: {}
+                f:requests.ephemeral-storage: {}
+                f:requests.memory: {}
+                f:requests.storage: {}
+          manager: openshift-apiserver
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        name: project-quota
+        namespace: george-test
+        resourceVersion: '286681'
+        uid: 6df85636-521e-4d31-b30e-e18f03962732
+      spec:
+        hard:
+          limits.cpu: '6'
+          limits.ephemeral-storage: 20G
+          limits.memory: 16Gi
+          pods: '10'
+          requests.cpu: '4'
+          requests.ephemeral-storage: 20G
+          requests.memory: 8Gi
+          requests.storage: 20G
+      status:
+        hard:
+          limits.cpu: '6'
+          limits.ephemeral-storage: 20G
+          limits.memory: 16Gi
+          pods: '10'
+          requests.cpu: '4'
+          requests.ephemeral-storage: 20G
+          requests.memory: 8Gi
+          requests.storage: 20G
+        used:
+          limits.cpu: '0'
+          limits.ephemeral-storage: '0'
+          limits.memory: '0'
+          pods: '0'
+          requests.cpu: '0'
+          requests.ephemeral-storage: '0'
+          requests.memory: '0'
+          requests.storage: '0'
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:45:09 +0000 (0:00:00.041)       0:00:47.517 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:45:09 +0000 (0:00:00.027)       0:00:47.545 ****** 
+[DEPRECATION WARNING]: evaluating 'resource' as a bare variable, this behaviour will go away and you might need to add |bool to the expression in the future. Also see CONDITIONAL_BARE_VARS configuration 
+toggle. This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+skipping: [localhost] => (item=Check if the storage request quota is 20G in the project george-test) 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:09 +0000 (0:00:00.049)       0:00:47.594 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:09 +0000 (0:00:00.029)       0:00:47.624 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:09 +0000 (0:00:00.026)       0:00:47.650 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:09 +0000 (0:00:00.031)       0:00:47.681 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:45:09 +0000 (0:00:00.026)       0:00:47.708 ****** 
+changed: [localhost]
+
+TASK [Check NetworkPolicy allow-same-namespace in project george-test] *************************************************************************************************************************************
+Monday 13 September 2021  00:45:10 +0000 (0:00:00.363)       0:00:48.071 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:45:10 +0000 (0:00:00.351)       0:00:48.423 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:45:10 +0000 (0:00:00.019)       0:00:48.443 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:45:10 +0000 (0:00:00.025)       0:00:48.469 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:11 +0000 (0:00:01.235)       0:00:49.704 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: networking.k8s.io/v1
+      kind: NetworkPolicy
+      metadata:
+        creationTimestamp: '2021-09-13T00:44:57Z'
+        generation: 1
+        managedFields:
+        - apiVersion: networking.k8s.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              f:ingress: {}
+              f:policyTypes: {}
+          manager: openshift-apiserver
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        name: allow-same-namespace
+        namespace: george-test
+        resourceVersion: '286670'
+        uid: 57a36fac-41d4-404e-bb82-57d71d5ff82d
+      spec:
+        ingress:
+        - from:
+          - podSelector: {}
+        podSelector: {}
+        policyTypes:
+        - Ingress
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:45:11 +0000 (0:00:00.029)       0:00:49.734 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:45:11 +0000 (0:00:00.028)       0:00:49.762 ****** 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:11 +0000 (0:00:00.021)       0:00:49.783 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:11 +0000 (0:00:00.030)       0:00:49.813 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:11 +0000 (0:00:00.025)       0:00:49.838 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:12 +0000 (0:00:00.030)       0:00:49.869 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:45:12 +0000 (0:00:00.025)       0:00:49.895 ****** 
+changed: [localhost]
+
+TASK [Check NetworkPolicy allow-from-openshift-ingress in project george-test] *****************************************************************************************************************************
+Monday 13 September 2021  00:45:12 +0000 (0:00:00.361)       0:00:50.256 ****** 
+
+TASK [grader_check_ocp_resource : Set success flag to true] ************************************************************************************************************************************************
+Monday 13 September 2021  00:45:12 +0000 (0:00:00.363)       0:00:50.620 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Show which resource is being checked] ************************************************************************************************************************************
+Monday 13 September 2021  00:45:12 +0000 (0:00:00.018)       0:00:50.638 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Look up resource] ********************************************************************************************************************************************************
+Monday 13 September 2021  00:45:12 +0000 (0:00:00.024)       0:00:50.662 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : debug] *******************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:01.433)       0:00:52.096 ****** 
+ok: [localhost] => 
+  r_k8s_info:
+    changed: false
+    failed: false
+    resources:
+    - apiVersion: networking.k8s.io/v1
+      kind: NetworkPolicy
+      metadata:
+        creationTimestamp: '2021-09-13T00:44:57Z'
+        generation: 1
+        managedFields:
+        - apiVersion: networking.k8s.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:spec:
+              f:ingress: {}
+              f:policyTypes: {}
+          manager: openshift-apiserver
+          operation: Update
+          time: '2021-09-13T00:44:57Z'
+        name: allow-from-openshift-ingress
+        namespace: george-test
+        resourceVersion: '286673'
+        uid: 3017763d-5acb-4922-93f4-175fa52c768c
+      spec:
+        ingress:
+        - from:
+          - namespaceSelector:
+              matchLabels:
+                network.openshift.io/policy-group: ingress
+        podSelector: {}
+        policyTypes:
+        - Ingress
+
+TASK [grader_check_ocp_resource : Check whether the resource exists] ***************************************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:00.031)       0:00:52.127 ****** 
+skipping: [localhost]
+
+TASK [grader_check_ocp_resource : Do resource definition checks] *******************************************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:00.027)       0:00:52.155 ****** 
+
+TASK [grader_check_ocp_resource : Create Pass logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:00.021)       0:00:52.176 ****** 
+ok: [localhost]
+
+TASK [grader_check_ocp_resource : Create Fail logging message] *********************************************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:00.030)       0:00:52.206 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Pass logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:00.025)       0:00:52.232 ****** 
+ok: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Create Fail logging message] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:00.031)       0:00:52.263 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_log_grade_to_log : Appends lab check result message to grader log lineinfile] ****************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:00.027)       0:00:52.291 ****** 
+changed: [localhost]
+
+TASK [Delete project george-test] **************************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:14 +0000 (0:00:00.356)       0:00:52.648 ****** 
+changed: [localhost]
+
+PLAY [Run FTL finish role - generate reports and updates] **************************************************************************************************************************************************
+
+TASK [Generate student grade report] ***********************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:15 +0000 (0:00:00.587)       0:00:53.235 ****** 
+
+TASK [ftl_run_grade_report_generation : Searching file for FAIL] *******************************************************************************************************************************************
+Monday 13 September 2021  00:45:15 +0000 (0:00:00.046)       0:00:53.281 ****** 
+ok: [localhost]
+
+TASK [ftl_run_grade_report_generation : Report contains one or more FAILs] *********************************************************************************************************************************
+Monday 13 September 2021  00:45:15 +0000 (0:00:00.359)       0:00:53.640 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_grade_report_generation : Report contains no FAILs] ******************************************************************************************************************************************
+Monday 13 September 2021  00:45:15 +0000 (0:00:00.023)       0:00:53.664 ****** 
+ok: [localhost]
+
+TASK [ftl_run_grade_report_generation : Get report hash] ***************************************************************************************************************************************************
+Monday 13 September 2021  00:45:15 +0000 (0:00:00.027)       0:00:53.691 ****** 
+ok: [localhost]
+
+TASK [ftl_run_grade_report_generation : Sign student report] ***********************************************************************************************************************************************
+Monday 13 September 2021  00:45:16 +0000 (0:00:00.376)       0:00:54.068 ****** 
+changed: [localhost]
+
+TASK [ftl_run_grade_report_generation : Output lab status and error count] *********************************************************************************************************************************
+Monday 13 September 2021  00:45:16 +0000 (0:00:00.363)       0:00:54.431 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_grade_report_generation : Finalize lab report with status] ***********************************************************************************************************************************
+Monday 13 September 2021  00:45:16 +0000 (0:00:00.027)       0:00:54.458 ****** 
+changed: [localhost]
+
+TASK [Show student grade] **********************************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:16 +0000 (0:00:00.356)       0:00:54.815 ****** 
+
+TASK [ftl_run_show_student_grade : Show report back to student] ********************************************************************************************************************************************
+Monday 13 September 2021  00:45:17 +0000 (0:00:00.041)       0:00:54.856 ****** 
+ok: [localhost] => 
+  msg: cat file? Maybe do it later? Via calling script
+
+TASK [Update LMS] ******************************************************************************************************************************************************************************************
+Monday 13 September 2021  00:45:17 +0000 (0:00:00.024)       0:00:54.881 ****** 
+
+TASK [ftl_run_grade_update_lrs : Check SCORMCLOUD API vars are set] ****************************************************************************************************************************************
+Monday 13 September 2021  00:45:17 +0000 (0:00:00.091)       0:00:54.972 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_grade_update_lrs : Lookup Tower Job ID by name] **********************************************************************************************************************************************
+Monday 13 September 2021  00:45:17 +0000 (0:00:00.025)       0:00:54.998 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_grade_update_lrs : Output response from job_id lookup] ***************************************************************************************************************************************
+Monday 13 September 2021  00:45:17 +0000 (0:00:00.024)       0:00:55.022 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_grade_update_lrs : Capture ftl job_id as fact for easy reference] ****************************************************************************************************************************
+Monday 13 September 2021  00:45:17 +0000 (0:00:00.024)       0:00:55.047 ****** 
+skipping: [localhost]
+
+TASK [ftl_run_grade_update_lrs : Call Tower API scormcloud-updater] ****************************************************************************************************************************************
+Monday 13 September 2021  00:45:17 +0000 (0:00:00.025)       0:00:55.072 ****** 
+skipping: [localhost]
+
+PLAY RECAP *************************************************************************************************************************************************************************************************
+localhost                  : ok=170  changed=45   unreachable=0    failed=0    skipped=97   rescued=0    ignored=0   
+
+Monday 13 September 2021  00:45:17 +0000 (0:00:00.023)       0:00:55.096 ****** 
+=============================================================================== 
+grader_check_ocp_node_label : Lookup nodes ---------------------------------------------------------------------------------------------------------------------------------------------------------- 1.55s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.53s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.43s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.32s
+grader_check_ocp_identity : Lookup identities ------------------------------------------------------------------------------------------------------------------------------------------------------- 1.31s
+grader_check_ocp_node_label : Lookup nodes ---------------------------------------------------------------------------------------------------------------------------------------------------------- 1.30s
+grader_check_ocp_pod_label : Lookup pods ------------------------------------------------------------------------------------------------------------------------------------------------------------ 1.30s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.29s
+grader_check_ocp_node_label : Lookup nodes ---------------------------------------------------------------------------------------------------------------------------------------------------------- 1.28s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.26s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.25s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.24s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.24s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.24s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.22s
+grader_check_ocp_resource : Look up resource -------------------------------------------------------------------------------------------------------------------------------------------------------- 1.21s
+ftl_run_init : Generate header for new: grading_report.txt ------------------------------------------------------------------------------------------------------------------------------------------ 1.12s
+Create a project george-test ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 0.75s
+grader_check_oc_command : Run oc command ------------------------------------------------------------------------------------------------------------------------------------------------------------ 0.75s
+grader_check_ocp_pod_node : Lookup node IPs --------------------------------------------------------------------------------------------------------------------------------------------------------- 0.61s
+Playbook run took 0 days, 0 hours, 0 minutes, 55 seconds
